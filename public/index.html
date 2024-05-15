@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
@@ -15,6 +15,62 @@
     </section>
     <section>
       <h1>Exercise 3: Building Something Real</h1>
+      <div
+        data-controller="clipboard"
+        data-clipboard-supported-class="clipboard--supported"
+      >
+        PIN:
+        <input
+          data-clipboard-target="source"
+          type="text"
+          value="1234"
+          readonly
+        />
+        <button data-action="clipboard#copy" class="js-button">
+          Copy to Clipboard
+        </button>
+      </div>
+      <div
+        data-controller="clipboard"
+        data-clipboard-supported-class="clipboard--supported"
+      >
+        <p>
+          if data-controller is wrapping two sources it will copy only the first
+          target!
+        </p>
+        PIN:
+        <input
+          data-clipboard-target="source"
+          type="text"
+          value="7777777"
+          readonly
+        />
+        <button data-action="clipboard#copy" class="js-button">
+          Copy to Clipboard
+        </button>
+        PIN: <textarea data-clipboard-target="source" readonly>3737</textarea>
+        <a href="#" data-action="clipboard#copy" class="js-button"
+          >Copy to Clipboard</a
+        >
+      </div>
+    </section>
+    <section>
+      <h1>Exercise 4: Designing for Resilience</h1>
+      <div
+        data-controller="clipboard"
+        data-clipboard-supported-class="clipboard--supported"
+      >
+        PIN:
+        <input
+          data-clipboard-target="source"
+          type="text"
+          value="1234"
+          readonly
+        />
+        <button data-action="clipboard#copy" class="js-button">
+          Copy to Clipboard
+        </button>
+      </div>
     </section>
   </body>
 </html>
