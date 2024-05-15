@@ -1,10 +1,12 @@
-import { Controller } from "@hotwired/stimulus";
+import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
-  static targets = ["name"];
+  static targets = ['name'];
+
   greet() {
     console.log(`Hello, ${this.name}!`);
   }
+
   get name() {
     return this.nameTarget.value;
   }
@@ -15,7 +17,7 @@ export default class extends Controller {
 Stimulus will automatically create a this.nameTarget property which
 returns the first matching target element.
 
- - if data-hello-target value inside the html-Tag 
+ - if data-hello-target value inside the html-Tag
    is called "input" you have to also call
    the target property with this.inputTarget!
 */
